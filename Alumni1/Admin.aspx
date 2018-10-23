@@ -6,10 +6,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Label ID="Label1" runat="server" >
-        <asp:Image ID="Image1"  ImageUrl="~/mahe_back.jpg" Height="100%" Width="100%" runat="server"></asp:Image>
+        <asp:Image ID="Image1"  ImageUrl="~/mahe_back_without_text.jpg" Height="100%" Width="100%" runat="server"></asp:Image>
     </asp:Label>
     <div class="LoginBox">
-
+        <div style="display: inline-block">
+            <asp:Label ID="Label2" runat="server" Text="Login" Font-Size="X-Large" Font-Names="Times New Roman"></asp:Label>
+        </div>
     </div>
 </asp:Content>
 
