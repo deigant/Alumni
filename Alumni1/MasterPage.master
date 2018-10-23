@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="master_page.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <asp:Label ID="Label1" runat="server" BackColor="lightgray" Height="80px" Width="100%" Text="">
+            
+            <asp:Image ID="Image1" runat="server" Height="75px"  ImageUrl="~/mahe.png" />
+            &nbsp; &nbsp;
+           
+
+
+
+        </asp:Label>
+
+        <asp:Label ID="Label2" runat="server" Height="50px" Width="100%"  BackColor="Black">
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" Font-Size="Medium" Font-Underline="true" NavigateUrl="Home.aspx">Home</asp:HyperLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="White" Font-Size="Medium" Font-Underline="true" NavigateUrl="Alumni.aspx">Alumni Registration</asp:HyperLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="White" Font-Size="Medium" Font-Underline="true" NavigateUrl="Admin.aspx">Admin Login</asp:HyperLink>
+
+        </asp:Label>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
