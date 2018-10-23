@@ -6,6 +6,9 @@
 <head runat="server">
     <title></title>
     <link href="master_page.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder runat="server" ID="ContentPlaceholder2">
+
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
