@@ -7,7 +7,8 @@
     <title></title>
     <link href="master_page.css" rel="stylesheet" />
     <asp:ContentPlaceHolder runat="server" ID="ContentPlaceholder2">
-
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="head">
     </asp:ContentPlaceHolder>
 </head>
 <body>
