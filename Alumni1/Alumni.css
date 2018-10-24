@@ -6,9 +6,13 @@
 
 }
 
-.margin_label{
-    margin-top:10px;
-   background-color:rgba(255,255,255,0.7);
+.margin_label {
+    margin-top: 30px;
+    background-color: rgba(255,255,255,0.7);
+    position:absolute;
+    right:40px;
+
+    
 }
 
 .back {
@@ -16,4 +20,27 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+    
+}
+
+.left{
+    position:absolute;
+    left:30px;
+    height: 300px;
+    width:500px;
+
+}
+
+.right{
+    position:absolute;
+    right : 100px;
+    height: 300px;
+    width:500px;
+}
+
+.register{
+    position:absolute;
+    top:375px;
+    left:550px;
+
 }

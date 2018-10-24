@@ -5,13 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server"  >
     <div class="back">
-   <asp:Label ID="Label2"  runat="server" Height="450px" Width="100%" CssClass="margin_label" >
+   <asp:Label ID="Label2"  runat="server" Height="450px" Width="95%" CssClass="margin_label" >
          <asp:Label ID="Label1" runat="server" Text="Alumni Registration" Font-Size="X-Large" CssClass="center" ></asp:Label>
+      
+       &nbsp;&nbsp;
        <asp:Label ID="Label3" runat="server" Text="Please register with your details"></asp:Label>
 
-
-       <br /><br />
-       <table>
+       <table class="left">
            <tr>
                <td>
                  <asp:Label ID="Label4" runat="server" Text="Name :"></asp:Label>
@@ -20,7 +20,7 @@
                <td>
                       <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
 
-                       <asp:RequiredFieldValidator ControlToValidate="TextBox1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                      &nbsp;&nbsp; <asp:RequiredFieldValidator ControlToValidate="TextBox1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name is required" ForeColor="Red"></asp:RequiredFieldValidator>
 
                </td>
            </tr>
@@ -52,6 +52,9 @@
                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                </td>
            </tr>
+           </table>
+
+           <table class="right">
            <tr>
                <td>
                    <asp:Label ID="Label8" runat="server" Text="Year of Graduation :"></asp:Label>
@@ -86,10 +89,8 @@
                </td>
            </tr>
        </table>
-       
-            
 
-       <asp:Button ID="Button1" runat="server" Text="Button" />
+       <asp:Button ID="Button1" runat="server" Text="Register"  Height="30px" Width="150px"  CssClass="register"/>
 
    </asp:Label>
 
