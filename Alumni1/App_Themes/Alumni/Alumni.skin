@@ -16,3 +16,5 @@ Default skin template. The following skins are provided as examples only.
 
 <asp:Label runat="server" Font-Names="Times New Roman" Font-Size="Medium"></asp:Label>
 <asp:TextBox runat="server" Height="30px" Width="200px" ></asp:TextBox>
+<asp:RequiredFieldValidator runat="Server" Forecolor="Red"></asp:RequiredFieldValidator>
+<asp:RegularExpressionValidator runat="Server" Forecolor="Red"></asp:RegularExpressionValidator>

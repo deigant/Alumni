@@ -26,21 +26,24 @@
 .left{
     position:absolute;
     left:30px;
-    height: 300px;
+    height: 350px;
     width:500px;
+    vertical-align:central;
+
 
 }
 
 .right{
     position:absolute;
     right : 100px;
-    height: 300px;
+    height: 350px;
     width:500px;
+    vertical-align:central;
 }
 
 .register {
     position: absolute;
-    top: 375px;
+    top: 400px;
     left: 550px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
