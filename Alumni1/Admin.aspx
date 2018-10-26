@@ -10,20 +10,18 @@
     </asp:Label>
     <div class="LoginBox">
         <div style="display: inline-block">
-            <asp:Label ID="Label2" runat="server" Text="Login" Font-Size="X-Large" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Admin Login" Font-Size="X-Large" Font-Names="Times New Roman" Font-Bold="true" BackColor="#CF7F69" Width ="300px" Height="30px" CssClass ="label"></asp:Label>
             <br />
             <br />
             <br />
-            <br />
-            <asp:TextBox ID="TextBox1" runat="server" PlaceHolder="Username"></asp:TextBox>
-            <br />
-            <br />
-            <asp:TextBox ID="TextBox2" runat="server" PlaceHolder="Password" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" CssClass="txtBox" PlaceHolder="Username"></asp:TextBox>
             <br />
             <br />
+            <asp:TextBox ID="TextBox2" runat="server" PlaceHolder="Password" CssClass="txtBox" TextMode="Password"></asp:TextBox>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Login" />
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" CssClass="butt" Text="Login" />
         </div>
     </div>
 </asp:Content>
-
