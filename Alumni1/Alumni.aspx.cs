@@ -44,12 +44,13 @@ public partial class Alumni : System.Web.UI.Page
         }
         catch(Exception ex)
         {
-
+            Label10.Text = ex.ToString();
+            Console.WriteLine("Exception");
         }
 
         string url = "Survey.aspx?";
         url += "Registration_Number = " + Server.UrlEncode(TextBox4.Text);
-        Response.Redirect(url);
+        //Response.Redirect(url);
 
 
     }
