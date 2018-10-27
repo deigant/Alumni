@@ -1,6 +1,15 @@
-﻿.back {
-    background: url(mahe_back_without_text.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
+﻿.Form_Back {
+    position: absolute;
+    top:225px;
+    left: 100px;
+    right: 100px;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.label {
+    text-align-last:center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
