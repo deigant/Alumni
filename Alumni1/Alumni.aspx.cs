@@ -49,9 +49,7 @@ public partial class Alumni : System.Web.UI.Page
         }
 
         string url = "Survey.aspx?";
-        url += "Registration_Number = " + Server.UrlEncode(TextBox4.Text);
-        //Response.Redirect(url);
-
-
+        url += "Registration_Number=" + Server.UrlEncode(TextBox4.Text);
+        Response.Redirect(url);
     }
 }
