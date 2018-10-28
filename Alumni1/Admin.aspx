@@ -21,7 +21,10 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" CssClass="butt" Text="Login" />
+            <asp:Button ID="Button1" runat="server" CssClass="butt" Text="Login" OnClick="Button1_Click" />
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="" ForeColor="Red"></asp:Label>
         </div>
     </div>
 </asp:Content>

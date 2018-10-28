@@ -1,6 +1,41 @@
-﻿.back {
-    background: url(mahe_back_without_text.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
+﻿.Form_Back {
+    position: absolute;
+    top:225px;
+    left: 100px;
+    right: 100px;
+    height: 1750px;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.9);
+}
+    
+.label {
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+hr {
+    border-color:lightgrey;
+    height:0.5px;
+}
+
+
+.txtbox {
+    height: 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.btn {
+    background-color: #6fdc6f;
+    position: relative;
+    left: 50%;
+    height: 35px;
+    width: 125px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
