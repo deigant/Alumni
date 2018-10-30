@@ -97,11 +97,7 @@ public partial class Admin_Survey_List : System.Web.UI.Page
             catch (Exception ex) { Label2.Text = cmdText + " " + ex.ToString(); }
            
         }
-        
-
-
-
-
+       
 
     }
     protected void Filter_Click(object o, EventArgs e)
@@ -118,5 +114,22 @@ public partial class Admin_Survey_List : System.Web.UI.Page
 
        
         Response.Redirect("Admin_Survey_List.aspx");
+    }
+
+    protected void GridView1_SelectedIndexChanged(object o,EventArgs e)
+    {
+        GridViewRow row = GridView1.SelectedRow;
+
+        HttpCookie cookie = Request.Cookies["admin_survey_select"];
+        if(cookie == null)
+        { 
+            cookie = new HttpCookie("admin_survey_select");
+        }
+
+        cookie["registration_number"] = ((Label)row.Cells[0].FindControl("Label7")).Text;
+        Response.Cookies.Add(cookie);
+        Response.Redirect("survey_display.aspx");
+
+
     }
 }
