@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Admin_Survey_List.aspx.cs" Inherits="Admin_Survey_List" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Admin_Survey_List.aspx.cs" Inherits="Admin_Survey_List" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceholder2" Runat="Server">
     <link href="Admin_Survey_List.css" rel="stylesheet" />
@@ -6,9 +6,10 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ConnectionStrings:Alumni%>" 
-         SelectCommand="Select * from Registrations"
+          SelectCommand ="Select * from registrations"
          DeleteCommand="Delete from Registrations where registration_number=@registration_number"
-         UpdateCommand="Update Registrations set Name=@Name,Contact=@Contact,Address=@Address,Year=@Year,Branch=@Branch,Company=@Company,Email=@Email where registration_number=@registration_number"></asp:SqlDataSource>
+         UpdateCommand="Update Registrations set Name=@Name,Contact=@Contact,Address=@Address,Year=@Year,Branch=@Branch,Company=@Company,Email=@Email where registration_number=@registration_number">     
+     </asp:SqlDataSource>
     
     <div class="back">
         <asp:Label ID="Label1" runat="server"  Height="450px" Width="95%" CssClass="margin_label">
@@ -26,16 +27,21 @@
             <br />
 
             <div align="center">
-
-
+                
             <div align="Center">
-                    <asp:GridView  CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True"  PageSize="10" ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="false">
+                    <asp:GridView OnRowDeleting="GridView1_Deleting"  OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="mydatagrid" PagerStyle-CssClass="pager"  DataKeyNames="registration_number" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True"  PageSize="10" ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="false">
                         <Columns>
-                            <asp:TemplateField HeaderText="Registration Number" >
+                            <asp:TemplateField HeaderText="Registration Number"  SortExpression="registration_number" >
                                 
                                 <ItemTemplate>
+                                    <asp:Label ID="Label7" Visible="false" runat="server" Text='<%#Bind("registration_number") %>'></asp:Label>
                                     <%# Eval("registration_number") %>
                                 </ItemTemplate>
+                                <EditItemTemplate>
+                                    <asp:Label ID="Label6" runat="server" Text='<%#Bind("registration_number") %>'></asp:Label>
+                                 </EditItemTemplate>
+                                
+                                 
                             </asp:TemplateField>
 
                             <asp:BoundField DataField="Name" HeaderText="Name" >
@@ -103,7 +109,7 @@
                         <asp:TextBox ID="TextBox8" runat="server" Width="150px" placeholder="E-mail" CssClass="rounded"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Filter"  CssClass="rounded"/>
+                        <asp:Button ID="Button1" runat="server" Text="Filter" OnClick="Filter_Click"  CssClass="rounded"/>
                     </td>
             
                 </tr>
@@ -122,4 +128,4 @@
 
 
 </asp:Content>
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
