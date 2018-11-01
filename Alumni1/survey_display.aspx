@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="survey_display.aspx.cs" Inherits="survey_display" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" StylesheetTheme="Survey" AutoEventWireup="true" CodeFile="survey_display.aspx.cs" Inherits="survey_display" %>
 
 
 <asp:Content ID="content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -19,15 +19,15 @@
          <tr>
              <td style="vertical-align:middle">
                  &nbsp;Name:&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server" ReadOnly="true" Text="" CssClass="txtbox"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox1" runat="server"   Width="170px" ReadOnly="true" Text="" CssClass="txtbox"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              </td>
              <td style="vertical-align:middle">
                  &nbsp;Registration Number:&nbsp;
-                 <asp:TextBox ID="TextBox2" runat="server" ReadOnly="true" Text="" CssClass="txtbox"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <asp:TextBox ID="TextBox2" runat="server" Width="170px" ReadOnly="true" Text="" CssClass="txtbox"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              </td>
              <td style="vertical-align:middle">
                  &nbsp;Campus Placement Company:&nbsp;
-                 <asp:TextBox ID="TextBox3" runat="server" ReadOnly="true" Text="" CssClass="txtbox"></asp:TextBox>
+                 <asp:TextBox ID="TextBox3" runat="server" Width="170px" ReadOnly="true" Text="" CssClass="txtbox"></asp:TextBox>
              </td>
          </tr>
      </table>
@@ -46,55 +46,41 @@
      <br />
      <asp:Label ID="Label6" runat="server" Text="Q:-    How would you rate the college's placement procedure, rules and the placement portal?"></asp:Label>
      <br />
-     <asp:RadioButtonList ID="RadioButtonList1" runat="server"  style="margin-left:50px">
-         <asp:ListItem>Extremely good</asp:ListItem>
-         <asp:ListItem>Very good</asp:ListItem>
-         <asp:ListItem>Moderately good</asp:ListItem>
-         <asp:ListItem>Slightly good</asp:ListItem>
-         <asp:ListItem>Not at all good</asp:ListItem>
-     </asp:RadioButtonList>
+     <br />
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox8" ReadOnly="true" runat="server" Text="" CssClass="txtbox"></asp:TextBox>
      <br />
      <br />
      <asp:Label ID="Label3" runat="server" Text="Q:-    Please provide further suggestions or feedbacks in a few words."></asp:Label>
      <br />
      <br />
-     <asp:TextBox ID="TextBox4" runat="server" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
+     <asp:TextBox ID="TextBox4" ReadOnly="true" runat="server" Text="" CssClass="txtbox" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
      <br />
      <br />
      <br />
-     <asp:Label ID="Label7" runat="server" Text="Q:-    How would you rate the college curriculum, choice of subjects and their corresponding labs?"></asp:Label>
+      <asp:Label ID="Label7" runat="server" Text="Q:-    How would you rate the college curriculum, choice of subjects and their corresponding labs?"></asp:Label>
      <br />
-     <asp:RadioButtonList ID="RadioButtonList2" runat="server" style="margin-left:50px">
-         <asp:ListItem>Extremely good</asp:ListItem>
-         <asp:ListItem>Very good</asp:ListItem>
-         <asp:ListItem>Moderately good</asp:ListItem>
-         <asp:ListItem>Slightly good</asp:ListItem>
-         <asp:ListItem>Not at all good</asp:ListItem>
-     </asp:RadioButtonList>
+     <br />
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox9" ReadOnly="true" Text="" CssClass="txtbox" runat="server"></asp:TextBox>
      <br />
      <br />
      <asp:Label ID="Label8" runat="server" Text="Q:-    Please provide us further suggestions or feedbacks in a few words."></asp:Label>
      <br />
      <br />
-     <asp:TextBox ID="TextBox5" runat="server" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
+     <asp:TextBox ID="TextBox5" ReadOnly="true" runat="server" Text="" CssClass="txtbox" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
      <br />
      <br />
      <br />
      <asp:Label ID="Label9" runat="server" Text="Q:-    How would you rate the research facilities, student projects and extra curricular activities provided by the college?"></asp:Label>
      <br />
-     <asp:RadioButtonList ID="RadioButtonList3" runat="server" style="margin-left:50px">
-         <asp:ListItem>Extremely good</asp:ListItem>
-         <asp:ListItem>Very good</asp:ListItem>
-         <asp:ListItem>Moderately good</asp:ListItem>
-         <asp:ListItem>Slightly good</asp:ListItem>
-         <asp:ListItem>Not at all good</asp:ListItem>
-     </asp:RadioButtonList>
+     <br />
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox10" ReadOnly="true" Text="" CssClass="txtbox" runat="server"></asp:TextBox>
      <br />
      <br />
      <asp:Label ID="Label10" runat="server" Text="Q:-    Please provide us further suggestions or feedbacks in a few words."></asp:Label>
      <br />
      <br />
-     <asp:TextBox ID="TextBox6" runat="server" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
+     <asp:TextBox ID="TextBox6" runat="server" ReadOnly="true" Text="" CssClass="txtbox" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
      <%--<asp:Label ID="Label3" runat="server" Text="AAAAAAAAAAAAAAAAAAAAAAAAAAA"></asp:Label>--%>
      <br />
      <br />
@@ -107,7 +93,7 @@
      <asp:Label ID="Label12" runat="server" Text="Q:-    Describe your experience in your joining company in a few words. Did the work assigned to you match your expectations?"></asp:Label>
      <br />
      <br />
-     <asp:TextBox ID="TextBox7" runat="server" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
+     <asp:TextBox ID="TextBox7" Text="" CssClass="txtbox" runat="server" ReadOnly="true" Height="100px" Width="500px" style="margin-left:50px"></asp:TextBox>
      <br />
      <br />
      <br />

@@ -29,7 +29,7 @@
             <div align="center">
                 
             <div align="Center">
-                    <asp:GridView  OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="mydatagrid" PagerStyle-CssClass="pager"  DataKeyNames="registration_number" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True"  PageSize="10" ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="false">
+                    <asp:GridView OnRowDeleting="GridView1_Deleting"  OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="mydatagrid" PagerStyle-CssClass="pager"  DataKeyNames="registration_number" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True"  PageSize="10" ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="false">
                         <Columns>
                             <asp:TemplateField HeaderText="Registration Number"  SortExpression="registration_number" >
                                 

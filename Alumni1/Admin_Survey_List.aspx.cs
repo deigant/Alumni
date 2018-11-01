@@ -125,11 +125,30 @@ public partial class Admin_Survey_List : System.Web.UI.Page
         { 
             cookie = new HttpCookie("admin_survey_select");
         }
-
         cookie["registration_number"] = ((Label)row.Cells[0].FindControl("Label7")).Text;
         Response.Cookies.Add(cookie);
         Response.Redirect("survey_display.aspx");
 
 
+    }
+    protected void GridView1_Deleting(object o, GridViewDeleteEventArgs e)
+    {
+        GridViewRow row = GridView1.Rows[e.RowIndex];
+        string registrationNumber = ((Label)row.Cells[0].FindControl("Label7")).Text;
+        string connectionString = WebConfigurationManager.ConnectionStrings["Alumni"].ConnectionString;
+        SqlConnection con = new SqlConnection(connectionString);
+        SqlCommand cmd = new SqlCommand("Delete from Survey where registration_number = @registration_number", con);
+        try
+        {
+            con.Open();
+            cmd.Parameters.AddWithValue("@registration_number", registrationNumber);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        catch(Exception ex)
+        {
+
+        }
+        finally { con.Close(); }
     }
 }
