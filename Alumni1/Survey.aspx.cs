@@ -13,4 +13,9 @@ public partial class Survey : System.Web.UI.Page
         //Label3.Text = regno;
         TextBox2.Text = regno;
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        
+    }
 }

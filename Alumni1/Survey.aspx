@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<asp:Label ID="Label1" runat="server" > <asp:Image ID="Image1"  ImageUrl="~/manipal_joined2.jpg" Height="100%" Width="100%" runat="server"></asp:Image>
+<asp:Label ID="Label1" runat="server" > <asp:Image ID="Image1"  ImageUrl="~/manipal_form_back.jpg" Height="100%" Width="100%" runat="server"></asp:Image>
  </asp:Label>
  <div class="Form_Back">
      <asp:Label ID="Label2" runat="server" Text="Exit Survey Form" Font-Size="XX-Large" Font-Names="Times New Roman" Font-Bold="true" BackColor=skyblue Width =100% Height="45px" CssClass ="label"></asp:Label>
@@ -117,6 +117,6 @@
              </td>
          </tr>
      </table>--%>
-     <asp:Button ID="Button1" runat="server" Text="Submit Form" CssClass="btn"/>
+     <asp:Button ID="Button1" runat="server" Text="Submit Form" CssClass="btn" OnClick="Button1_Click"/>
      </div>
 </asp:Content>
