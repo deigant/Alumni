@@ -1,0 +1,18 @@
+﻿.bla {
+    background: url(mahe_back_without_text.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.Boxy {
+    top: 150px;
+    width: 380px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: rgba(208,208,208,0.7);
+}
+
+hr {
+    border-color: lightgrey;
+    height: 0.5px;
+}
