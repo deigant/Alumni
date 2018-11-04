@@ -38,20 +38,21 @@ public partial class Alumni : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@Email", TextBox8.Text);
 
             cmd.ExecuteNonQuery();
+
             con.Close();
 
+            string url = "Survey.aspx?";
+            url += "Registration_Number=" + Server.UrlEncode(TextBox4.Text) + "&";
+            url += "Name=" + Server.UrlEncode(TextBox1.Text) + "&";
+            url += "company= " + Server.UrlEncode(TextBox6.Text);
+            Response.Redirect(url);
 
         }
         catch(Exception ex)
         {
-            Label10.Text = ex.ToString();
-            Console.WriteLine("Exception");
+            Label12.Visible = true;
         }
 
-        string url = "Survey.aspx?";
-        url += "Registration_Number=" + Server.UrlEncode(TextBox4.Text) + "&";
-        url += "Name=" + Server.UrlEncode(TextBox1.Text) + "&";
-        url += "company= " + Server.UrlEncode(TextBox6.Text);
-        Response.Redirect(url);
+        
     }
 }

@@ -70,7 +70,7 @@
 
                       &nbsp;&nbsp; <asp:RequiredFieldValidator ControlToValidate="TextBox4" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Registration Number is required!" ></asp:RequiredFieldValidator>
                    <br />
-                   <asp:RegularExpressionValidator ID="RegularExpressionValidator4"  ControlToValidate="TextBox4"  ValidationExpression="[0-9]{9}" runat="server" ErrorMessage="RegularExpressionValidator"></asp:RegularExpressionValidator>
+                   <asp:RegularExpressionValidator ID="RegularExpressionValidator4"  ControlToValidate="TextBox4"  ValidationExpression="[0-9]{9}" runat="server" ErrorMessage="Please enter a 9 digit registration number"></asp:RegularExpressionValidator>
              <br />
 
                    </td>
@@ -143,7 +143,7 @@
        </table>
 
        <asp:Button ID="Button1" runat="server" Text="Register"  Height="30px" Width="150px"  CssClass="register" OnClick="Button1_Click"/>
-
+       &nbsp;&nbsp;&nbsp; <asp:Label ID="Label12" runat="server" Text="Registration Failed. Please Enter the Correct Data and try again." CssClass="errorb"  ForeColor="Red" Visible="false"></asp:Label>
    </asp:Label>
 
     </div>
