@@ -58,3 +58,9 @@
     border-top-right-radius:10px;
 }
 
+.errorb {
+    position: absolute;
+    top: 400px;
+    left: 800px;
+}
+

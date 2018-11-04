@@ -14,8 +14,25 @@ public partial class Survey : System.Web.UI.Page
         string regno = Server.UrlDecode(Request.QueryString["Registration_Number"]);
         //Label3.Text = regno;
         TextBox2.Text = regno;
-        TextBox1.Text = Request.QueryString["name"];
-        TextBox3.Text = Request.QueryString["company"];
+
+        string connectionString = WebConfigurationManager.ConnectionStrings["Alumni"].ConnectionString;
+        SqlConnection con = new SqlConnection(connectionString);
+        SqlCommand cmd = new SqlCommand("Select * from Registrations where registration_number=@registration_number", con);
+
+        try
+        {
+            con.Open();
+            cmd.Parameters.AddWithValue("@registration_number", TextBox2.Text);
+
+            SqlDataReader dr =  cmd.ExecuteReader();
+            dr.Read();
+            TextBox1.Text = dr["Name"].ToString();
+            TextBox3.Text = dr["Company"].ToString();
+            con.Close();
+        }
+        catch (Exception ex) { Label1.Text = ex.ToString(); 
+        }
+        finally { con.Close(); } 
 
     }
     protected void Button1_Click(object o,EventArgs args)
@@ -45,13 +62,9 @@ public partial class Survey : System.Web.UI.Page
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        catch(Exception ex) { Label1.Text = ex.ToString(); }
+        catch(Exception ex) { //Label1.Text = ex.ToString(); 
+        }
         finally { con.Close(); }
 
-    }
-
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        
     }
 }

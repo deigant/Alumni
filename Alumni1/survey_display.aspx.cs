@@ -24,8 +24,10 @@ public partial class survey_display : System.Web.UI.Page
             con.Open();
             cmd.Parameters.AddWithValue("@registration_number",TextBox2.Text);
             SqlDataReader reader = cmd.ExecuteReader();
+            int count = 0;
             while (reader.Read())
             {
+                count++;
                 TextBox1.Text = reader["name"].ToString();
                 TextBox3.Text = reader["company"].ToString();
                 TextBox8.Text = reader[3].ToString();
@@ -36,11 +38,16 @@ public partial class survey_display : System.Web.UI.Page
                 TextBox6.Text = reader["research_suggest"].ToString();
                 TextBox7.Text = reader["company_suggest"].ToString();
             }
+            if(count == 0)
+            {
+                Label13.Visible = true;
+            }
             con.Close();
         }
         catch(Exception ex)
         {
-            Label1.Text = ex.ToString() + ex.StackTrace;
+            
+            //Label1.Text = ex.ToString() + ex.StackTrace;
         }
         finally
         {
