@@ -61,6 +61,8 @@ public partial class Survey : System.Web.UI.Page
 
             cmd.ExecuteNonQuery();
             con.Close();
+            Session["blah"] = TextBox1.Text;
+            Response.Redirect("Survey_Confirm.aspx");
         }
         catch(Exception ex) { //Label1.Text = ex.ToString(); 
         }
