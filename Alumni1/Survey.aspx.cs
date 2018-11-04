@@ -49,4 +49,9 @@ public partial class Survey : System.Web.UI.Page
         finally { con.Close(); }
 
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        
+    }
 }
