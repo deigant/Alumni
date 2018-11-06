@@ -24,6 +24,8 @@
                      <br />
 
                       &nbsp;&nbsp; <asp:RequiredFieldValidator ControlToValidate="TextBox1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name is required!"></asp:RequiredFieldValidator>
+                     <br />
+                   &nbsp;&nbsp; <asp:RegularExpressionValidator ValidationExpression="[a-zA-Z]*" ID="RegularExpressionValidator5" runat="server" ControlToValidate="TextBox1" ErrorMessage="Only Characters are allowed!"></asp:RegularExpressionValidator>
                    <br /><br />
 
                </td>
@@ -117,6 +119,8 @@
                        <br />
 
                       &nbsp;&nbsp; <asp:RequiredFieldValidator ControlToValidate="TextBox7" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Branch is required!" ></asp:RequiredFieldValidator>
+                   <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ValidationExpression="[a-zA-Z]*" ControlToValidate="TextBox7" ErrorMessage="Only characters are allowed!"></asp:RegularExpressionValidator>
                     <br />
 
 
@@ -134,7 +138,7 @@
                       &nbsp;&nbsp; <asp:RequiredFieldValidator ControlToValidate="TextBox8" ID="RequiredFieldValidator8" runat="server" ErrorMessage="Email Id is required!" ForeColor="Red"></asp:RequiredFieldValidator>
                    <br />
 
-                   <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox8"  ValidationExpression="[a-zA-Z].+@.+" ErrorMessage="Please enter a valid Email Id!"></asp:RegularExpressionValidator>
+                   <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox8"  ValidationExpression="[a-zA-Z].*@.+\.[c][o][m]" ErrorMessage="Please enter a valid Email Id!"></asp:RegularExpressionValidator>
 
 
 
